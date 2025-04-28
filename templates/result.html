@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ region }} 지역 정보</title>
+</head>
+<body>
+    <h1>{{ region }} 지역 관광지 리스트</h1>
+    <ul>
+        {% for item in tour_items %}
+            <li><strong>{{ item.title }}</strong> - {{ item.addr1 }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>{{ region }} 지역 숙박 리스트</h1>
+    <ul>
+        {% for item in hotel_items %}
+            <li><strong>{{ item.title }}</strong> - {{ item.addr1 }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">돌아가기</a>
+</body>
+</html>

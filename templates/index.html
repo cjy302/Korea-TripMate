@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>TripMate - 지역 선택</title>
+</head>
+<body>
+    <h1>지역을 선택하세요</h1>
+    <form action="/search" method="get">
+        <select name="region">
+            {% for name in areas %}
+                <option value="{{ name }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">검색</button>
+    </form>
+</body>
+</html>
